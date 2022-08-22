@@ -3,9 +3,10 @@ using models;
 using services;
 
 namespace Controllers;
+[ApiController]
+[Route("/api/[controller]/[action]")]
 
-
-class BludosController : ControllerBase
+public class BludosController : ControllerBase
 {
     BludosService _bludosService;
     public BludosController(BludosService bludosService)
@@ -14,7 +15,7 @@ class BludosController : ControllerBase
     }
 
     [HttpGet]
-    public void GenerateStudent()
+    public void GenerateBludos()
     {
       
         _bludosService.GenerateBludos();
@@ -36,6 +37,23 @@ class BludosController : ControllerBase
         _bludosService.Add(bludo);
     }
 
+    [HttpOptions("SetBludosInactive")]
+    public void SetBludosInactive(int id)
+    {
+        _bludosService.SetInactive(id);
+    }
 
+    [HttpOptions("SetBludosActve")]
+    public void SetBludosActive(int id)
+    {
+        _bludosService.SetActive(id);
+    }
+
+    [HttpPost("UpdateBludos")]
+    public void UpdateBludos(Bludo bludo)
+    {
+       _bludosService.UpdateBludos(bludo);
+    }
 }
+
 

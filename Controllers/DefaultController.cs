@@ -6,7 +6,9 @@ using testnet;
 
 
 namespace controllers{
-    class DefaultController{
+    [ApiController]
+[Route("/api/[controller]/[action]")]
+    public class DefaultController{
         
         DataContext _datacontext;
         BludosService _bludosService;

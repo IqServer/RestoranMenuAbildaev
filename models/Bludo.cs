@@ -11,11 +11,13 @@ public class Bludo
         [JsonIgnore]
         public DateTime CreatedAt {get;set;} = DateTime.UtcNow;
         public bool IsActive {get; set;}
-        public int Cost{get;set;}
-        public int Kkal{get;set;}
-        public string Recipe{get;set;}
-        public int Grams{get;set;}
+        public int CategoryId{get; set;}
+        public string name{get; set;}
+        public int price{get;set;}
+        public int calories{get;set;}
+        public string recipe{get;set;}
+        public int grams{get;set;}
         public string Photo{get;set;}
-        
+        public string description{get; set;}
     }
 }
