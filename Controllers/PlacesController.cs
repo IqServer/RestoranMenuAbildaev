@@ -14,10 +14,27 @@ class PlacesController : ControllerBase
     }
 
     [HttpGet]
-    public void GenerateStudent()
+    public void GeneratePlaces()
     {
       
         _placesService.GeneratePlaces();
     }
-}
+    [HttpGet("GetAll")]
+    public List<Place> GetAll()
+    {
+        return _placesService.GetPlaces();
+    }
 
+    [HttpGet("GetPlacesById")]
+    public Place GetPlacesById(int id)
+    {
+        return _placesService.GetPlacesById(id);
+    }
+    
+    [HttpPost("Add")]
+    public void Add([FromBody]Place place)
+    {
+        _placesService.Add(place);
+    }
+    
+}

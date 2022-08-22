@@ -43,5 +43,45 @@ public class ZakazsService
 
         _context.SaveChanges();
         }
-    }
+    public void Add(Zakaz newZakazs)
+    
+    {
+     _context.Add(newZakazs);
+     _context.SaveChanges();
 
+}    
+    public Zakaz GetZakazsById(int id)
+    {
+        return _context.Zakazs.Where(x => x.Id == id ).FirstOrDefault();
+    }
+    public void Update(Zakaz newZakazs)
+    
+    {
+     _context.Update(newZakazs);
+     _context.SaveChanges();
+
+}    
+    public void RemovePlaces(int id)
+    {
+        Place? place = _context.Places.FirstOrDefault(x => x.Id == id);
+        _context.Places.Remove(place);
+        _context.SaveChanges();
+
+
+
+}
+    public void SetInactive(int id)
+    {
+        Place place = _context.Places.FirstOrDefault(x => x.Id == id);
+        place.IsActive = false;
+        _context.Places.Update(place);
+        _context.SaveChanges();
+    }
+    public void SetActive(int id)
+    {
+        Place place = _context.Places.FirstOrDefault(x => x.Id == id);
+        place.IsActive = true;
+        _context.Places.Update(place);
+        _context.SaveChanges();
+    }  
+}

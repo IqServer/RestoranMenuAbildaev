@@ -47,5 +47,42 @@ public class PlacesService
 
          _context.SaveChanges();
         }
-        
+    public void Add(Place newPlaces)
+    
+    {
+     _context.Add(newPlaces);
+     _context.SaveChanges();
+
+}    
+    public Place GetPlacesById(int id)
+    {
+        return _context.Places.Where(x => x.Id == id ).FirstOrDefault();
+    }
+    public void Update(Place newPlaces)
+    
+    {
+     _context.Update(newPlaces);
+     _context.SaveChanges();
+
+}    
+    public void RemovePlaces(int id)
+    {
+        Place? place = _context.Places.FirstOrDefault(x => x.Id == id);
+        _context.Places.Remove(place);
+        _context.SaveChanges();
+    }
+    public void SetInactive(int id)
+    {
+        Place place = _context.Places.FirstOrDefault(x => x.Id == id);
+        place.IsActive = false;
+        _context.Places.Update(place);
+        _context.SaveChanges();
+    }
+    public void SetActive(int id)
+    {
+        Place place = _context.Places.FirstOrDefault(x => x.Id == id);
+        place.IsActive = true;
+        _context.Places.Update(place);
+        _context.SaveChanges();
+    }
     }

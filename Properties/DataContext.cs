@@ -11,9 +11,8 @@ namespace testnet
         }
         public DbSet<Place>? Places { get; set; }
         public DbSet<Bludo>? Bludos { get; set; }
-        public DbSet<Povar>? Povars { get; set; }
         public DbSet<Zakaz>? Zakazs { get; set; }
-        public DbSet<User>? Users { get; set; }
+        
 
 
        

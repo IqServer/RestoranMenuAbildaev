@@ -19,5 +19,23 @@ class BludosController : ControllerBase
       
         _bludosService.GenerateBludos();
     }
+
+    [HttpGet("GetAll")]
+    public List<Bludo> GetAll()
+    {
+        return _bludosService.GetBludos();
+    }
+    [HttpGet("GetProjectById")]
+    public Bludo GetProjectById(int id)
+    {
+        return _bludosService.GetBludosById(id);
+    }
+    [HttpPost("Add")]
+    public void Add([FromBody]Bludo bludo)
+    {
+        _bludosService.Add(bludo);
+    }
+
+
 }
 

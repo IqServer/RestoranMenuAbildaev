@@ -66,9 +66,49 @@ public class BludosService
 
         _context.SaveChanges();
     }
+    public void Add(Bludo newBludos)
+    
+    {
+     _context.Add(newBludos);
+     _context.SaveChanges();
+
+}    
+    public Bludo GetBludosById(int id)
+    {
+        return _context.Bludos.Where(x => x.Id == id ).FirstOrDefault();
+    }
+    public void Update(Bludo newBludos)
+    
+    {
+     _context.Update(newBludos);
+     _context.SaveChanges();
+
+}    
+    public void RemovePlace(int id)
+    {
+        Place? place = _context.Places.FirstOrDefault(x => x.Id == id);
+        _context.Places.Remove(place);
+        _context.SaveChanges();
+    }
+    public void SetInactive(int id)
+    {
+        Place place = _context.Places.FirstOrDefault(x => x.Id == id);
+        place.IsActive = false;
+        _context.Places.Update(place);
+        _context.SaveChanges();
+    }
+    public void SetActive(int id)
+    {
+        Place place = _context.Places.FirstOrDefault(x => x.Id == id);
+        place.IsActive = true;
+        _context.Places.Update(place);
+        _context.SaveChanges();
+    }
+    }
 
 
-}
+
+
 
 
 
