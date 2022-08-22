@@ -3,9 +3,10 @@ using models;
 using services;
 
 namespace Controllers;
+[ApiController]
+[Route("/api/[controller]/[action]")]
 
-
-class ZakazsController : ControllerBase
+public class ZakazsController : ControllerBase
 {
     ZakazsService _zakazsService;
     public ZakazsController(ZakazsService zakazsService)
