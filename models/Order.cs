@@ -4,7 +4,7 @@ namespace models
 {
     
 
-public class Zakaz
+public class Order
     {
        
         public int Id {get;set;}

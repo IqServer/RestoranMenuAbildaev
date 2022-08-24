@@ -8,7 +8,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog((ctx, lc) => lc
     .WriteTo.Console()
     .Enrich.WithProperty("Firma", "fir4")
+    .WriteTo.Seq("http://localhost:5341")
     );
+    builder.Services.AddCors(options => options.AddPolicy("AllowAll",
+    builder =>
+    {
+        builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    }));
 
 // Add services to the container.
 
@@ -27,15 +36,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<PlacesService>();
+builder.Services.AddScoped<ZakazsService>();
+builder.Services.AddScoped<BludosService>();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
+app.UseRouting();
+
+app.UseCors("AllowAll");
+
+app.UseSwagger();
+
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

@@ -58,10 +58,10 @@ public class PlacesService
     {
         return _context.Places.Where(x => x.Id == id ).FirstOrDefault();
     }
-    public void Update(Place newPlaces)
+    public void UpdatePlaces(Place place)
     
     {
-     _context.Update(newPlaces);
+     _context.Update(place);
      _context.SaveChanges();
 
 }    

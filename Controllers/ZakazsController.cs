@@ -35,5 +35,28 @@ public class ZakazsController : ControllerBase
     {
         _zakazsService.Add(zakaz);
     }
+
+    [HttpOptions("SetZakazsInactive")]
+    public void SetZakazsInactive(int id)
+    {
+        _zakazsService.SetInactive(id);
+    }
+
+    [HttpOptions("SetZakazsActve")]
+    public void SetZakazsActive(int id)
+    {
+        _zakazsService.SetActive(id);
+    }
+
+    [HttpPost("UpdateZakazs")]
+    public void UpdateZakazs(Zakaz zakaz)
+    {
+       _zakazsService.UpdateZakazs(zakaz);
+    }
 }
+
+
+
+
+
 
