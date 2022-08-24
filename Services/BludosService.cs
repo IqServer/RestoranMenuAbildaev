@@ -41,7 +41,7 @@ public class BludosService
         bludo2.CategoryId = 1;
         bludo2.Description = " очень вкусно";
         bludo2.Name = "Супь";
-        _context.Bludos.Add(bludo);
+        _context.Bludos.Add(bludo2);
 
        Bludo bludo3 = new Bludo();
         bludo3.Price = 228;
@@ -52,7 +52,7 @@ public class BludosService
         bludo3.CategoryId = 1;
         bludo3.Description = " очень вкусно";
         bludo3.Name = "Супь";
-        _context.Bludos.Add(bludo);
+        _context.Bludos.Add(bludo3);
 
         Bludo bludo4 = new Bludo();
         bludo4.Price = 228;
@@ -63,7 +63,7 @@ public class BludosService
         bludo4.CategoryId = 1;
         bludo4.Description = " очень вкусно";
         bludo4.Name = "Супь";
-        _context.Bludos.Add(bludo);
+        _context.Bludos.Add(bludo4);
 
         Bludo bludo5 = new Bludo();
         bludo5.Price = 228;
@@ -74,7 +74,7 @@ public class BludosService
         bludo5.CategoryId = 1;
         bludo5.Description = " очень вкусно";
         bludo5.Name = "Супь";
-        _context.Bludos.Add(bludo);
+        _context.Bludos.Add(bludo5);
 
         Bludo bludo6 = new Bludo();
         bludo6.Price = 228;
@@ -85,7 +85,8 @@ public class BludosService
         bludo6.CategoryId = 1;
         bludo6.Description = " очень вкусно";
         bludo6.Name = "Супь";
-      
+        _context.Bludos.Add(bludo6);
+
         Bludo bludo7 = new Bludo();
         bludo7.Price = 228;
         bludo7.Calories = 228;
@@ -95,7 +96,7 @@ public class BludosService
         bludo7.CategoryId = 1;
         bludo7.Description = " очень вкусно";
         bludo7.Name = "Супь";
-        _context.Bludos.Add(bludo);
+        _context.Bludos.Add(bludo7);
 
         Bludo bludo8 = new Bludo();
         bludo8.Price = 228;
@@ -106,7 +107,7 @@ public class BludosService
         bludo8.CategoryId = 1;
         bludo8.Description = " очень вкусно";
         bludo8.Name = "Супь";
-        _context.Bludos.Add(bludo);
+        _context.Bludos.Add(bludo8);
 
         Bludo bludo9 = new Bludo();
         bludo9.Price = 228;
@@ -117,7 +118,7 @@ public class BludosService
         bludo9.CategoryId = 1;
         bludo9.Description = " очень вкусно";
         bludo9.Name = "Супь";
-        _context.Bludos.Add(bludo);
+        _context.Bludos.Add(bludo9);
 
         Bludo bludo10 = new Bludo();
         bludo10.Price = 228;
@@ -128,7 +129,7 @@ public class BludosService
         bludo10.CategoryId = 1;
         bludo10.Description = " очень вкусно";
         bludo10.Name = "Супь";
-        _context.Bludos.Add(bludo);
+        _context.Bludos.Add(bludo10);
 
       
       
@@ -154,22 +155,22 @@ public class BludosService
     }    
     public void RemoveBludos(int id)
     {
-        Place? place = _context.Places.FirstOrDefault(x => x.Id == id);
-        _context.Places.Remove(place);
+        Bludo? Bludos = _context.Bludos.FirstOrDefault(x => x.Id == id);
+        _context.Bludos.Remove(Bludos);
         _context.SaveChanges();
     }
     public void SetInactive(int id)
     {
-        Place place = _context.Places.FirstOrDefault(x => x.Id == id);
-        place.IsActive = false;
-        _context.Places.Update(place);
+        Bludo Bludos = _context.Bludos.FirstOrDefault(x => x.Id == id);
+        Bludos.IsActive = false;
+        _context.Bludos.Update(Bludos);
         _context.SaveChanges();
     }
     public void SetActive(int id)
     {
-        Place place = _context.Places.FirstOrDefault(x => x.Id == id);
-        place.IsActive = true;
-        _context.Places.Update(place);
+        Bludo Bludos = _context.Bludos.FirstOrDefault(x => x.Id == id);
+        Bludos.IsActive = true;
+        _context.Bludos.Update(Bludos);
         _context.SaveChanges();
     }
     }

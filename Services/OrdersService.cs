@@ -33,21 +33,21 @@ public class OrdersService
         order1.Bludos = "Ъ";
         order1.Status = "два два восемь";
         
-        _context.Orders.Add(order);
+        _context.Orders.Add(order1);
 
          Order order2 = new Order();
         order2.Cost = 228;
         order2.Bludos = "Ъ";
         order2.Status = "два два восемь";
         
-        _context.Orders.Add(order);
+        _context.Orders.Add(order2);
 
          Order order3 = new Order();
         order3.Cost = 228;
         order3.Bludos = "Ъ";
         order3.Status = "два два восемь";
         
-        _context.Orders.Add(order);
+        _context.Orders.Add(order3);
     }
     public void Add(Order newOrders)
     
