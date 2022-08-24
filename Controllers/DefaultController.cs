@@ -10,22 +10,29 @@ namespace controllers{
 [Route("/api/[controller]/[action]")]
     public class DefaultController{
         
-        DataContext _datacontext;
         BludosService _bludosService;
         PlacesService _placesService;
-        ZakazsService _zakazsService;
-        public DefaultController(DataContext data, BludosService bludos, PlacesService places, ZakazsService zakazs)
+        OrdersService _ordersService;
+        DataContext _context;
+        public DefaultController(DataContext data,
+         BludosService bludos, PlacesService places, OrdersService orders)
         {
-            _datacontext = data;
+            _context = data;
             _bludosService = bludos;
             _placesService = places;
-            _zakazsService = zakazs;
+            _ordersService = orders;
         }
         [HttpGet]
         public void Default(){
          _bludosService.GenerateBludos(); 
          _placesService.GeneratePlaces();
-         _zakazsService.GenerateZakazs();
+         _ordersService.GenerateOrders();
         }
+
+        [HttpGet]
+        public void CreateDB(){
+         _context.CreateBDNew();
+        }
+
     }
 }

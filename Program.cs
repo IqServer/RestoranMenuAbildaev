@@ -36,8 +36,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<PlacesService>();
-builder.Services.AddScoped<ZakazsService>();
+builder.Services.AddScoped<OrdersService>();
 builder.Services.AddScoped<BludosService>();
+builder.Services.AddScoped<OrdersService>();
 
 var app = builder.Build();
 

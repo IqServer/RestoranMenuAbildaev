@@ -10,9 +10,9 @@ public class Place
         public int Id {get;set;}
         [JsonIgnore]
         public DateTime CreatedAt {get;set;} = DateTime.UtcNow;
-        public bool IsActive {set; get;}
+        public bool? IsActive {set; get;}
         public string? Title {get;set;}
         public string? Adress {get;set;}
-        public string FIO { get; internal set; }
+        public string? FIO { get; internal set; }
     }
 }
