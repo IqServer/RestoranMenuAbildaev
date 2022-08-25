@@ -14,7 +14,7 @@ public class CategoriesController : ControllerBase
         _CategoriesService = CategoriesService;
     }
 
-    [HttpGet]
+    [HttpGet("GenerateCategories")]
     public void GenerateCategories()
     {
       

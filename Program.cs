@@ -39,6 +39,7 @@ builder.Services.AddScoped<PlacesService>();
 builder.Services.AddScoped<OrdersService>();
 builder.Services.AddScoped<BludosService>();
 builder.Services.AddScoped<OrdersService>();
+builder.Services.AddScoped<CategoriesService>();
 
 var app = builder.Build();
 
