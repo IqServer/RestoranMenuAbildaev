@@ -31,19 +31,19 @@ public class PlacesService
         place1.Title = "228";
         place1.Adress = "228";
         place1.FIO = "два два восемь";
-        _context.Places.Add(place);
+        _context.Places.Add(place1);
 
         Place place2 = new Place();
         place2.Title = "228";
         place2.Adress = "228";
         place2.FIO = "два два восемь";
-        _context.Places.Add(place);
+        _context.Places.Add(place2);
 
         Place place3 = new Place();
         place3.Title = "228";
         place3.Adress = "228";
         place3.FIO = "два два восемь";
-        _context.Places.Add(place);
+        _context.Places.Add(place3);
 
          _context.SaveChanges();
         }
@@ -58,10 +58,10 @@ public class PlacesService
     {
         return _context.Places.Where(x => x.Id == id ).FirstOrDefault();
     }
-    public void Update(Place newPlaces)
+    public void UpdatePlaces(Place place)
     
     {
-     _context.Update(newPlaces);
+     _context.Update(place);
      _context.SaveChanges();
 
 }    

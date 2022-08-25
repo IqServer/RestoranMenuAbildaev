@@ -38,4 +38,24 @@ public class PlacesController : ControllerBase
         _placesService.Add(place);
     }
     
+    [HttpOptions("SetPlacesInactive")]
+    public void SetPlacesInactive(int id)
+    {
+        _placesService.SetInactive(id);
+    }
+
+    [HttpOptions("SetPlacesActve")]
+    public void SetPLacesActive(int id)
+    {
+        _placesService.SetActive(id);
+    }
+
+    [HttpPost("UpdatePlaces")]
+    public void UpdatePlaces(Place place)
+    {
+       _placesService.UpdatePlaces(place);
+    }
 }
+
+
+

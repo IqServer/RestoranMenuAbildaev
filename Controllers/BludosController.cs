@@ -26,8 +26,8 @@ public class BludosController : ControllerBase
     {
         return _bludosService.GetBludos();
     }
-    [HttpGet("GetProjectById")]
-    public Bludo GetProjectById(int id)
+    [HttpGet("GetBludosById")]
+    public Bludo GetBludosById(int id)
     {
         return _bludosService.GetBludosById(id);
     }

@@ -22,113 +22,114 @@ public class BludosService
     public void GenerateBludos()
     {
         Bludo bludo = new Bludo();
-        bludo.price = 228;
-        bludo.calories = 228;
-        bludo.recipe = "два два восемь";
-        bludo.grams = 228;
+        bludo.Price = 228;
+        bludo.Calories = 228;
+        bludo.Recipe = "два два восемь";
+        bludo.Grams = 228;
         bludo.Photo = "два два восемь";
         bludo.CategoryId = 1;
-        bludo.description = " очень вкусно";
-        bludo.name = "Супь";
+        bludo.Description = " очень вкусно";
+        bludo.Name = "Супь";
         _context.Bludos.Add(bludo);
 
         Bludo bludo2 = new Bludo();
-        bludo2.price = 228;
-        bludo2.calories = 228;
-        bludo2.recipe = "два два восемь";
-        bludo2.grams = 228;
+        bludo2.Price = 228;
+        bludo2.Calories = 228;
+        bludo2.Recipe = "два два восемь";
+        bludo2.Grams = 228;
         bludo2.Photo = "два два восемь";
         bludo2.CategoryId = 1;
-        bludo2.description = " очень вкусно";
-        bludo2.name = "Супь";
-        _context.Bludos.Add(bludo);
+        bludo2.Description = " очень вкусно";
+        bludo2.Name = "Супь";
+        _context.Bludos.Add(bludo2);
 
        Bludo bludo3 = new Bludo();
-        bludo3.price = 228;
-        bludo3.calories = 228;
-        bludo3.recipe = "два два восемь";
-        bludo3.grams = 228;
+        bludo3.Price = 228;
+        bludo3.Calories = 228;
+        bludo3.Recipe = "два два восемь";
+        bludo3.Grams = 228;
         bludo3.Photo = "два два восемь";
         bludo3.CategoryId = 1;
-        bludo3.description = " очень вкусно";
-        bludo3.name = "Супь";
-        _context.Bludos.Add(bludo);
+        bludo3.Description = " очень вкусно";
+        bludo3.Name = "Супь";
+        _context.Bludos.Add(bludo3);
 
         Bludo bludo4 = new Bludo();
-        bludo4.price = 228;
-        bludo4.calories = 228;
-        bludo4.recipe = "два два восемь";
-        bludo4.grams = 228;
+        bludo4.Price = 228;
+        bludo4.Calories = 228;
+        bludo4.Recipe = "два два восемь";
+        bludo4.Grams = 228;
         bludo4.Photo = "два два восемь";
         bludo4.CategoryId = 1;
-        bludo4.description = " очень вкусно";
-        bludo4.name = "Супь";
-        _context.Bludos.Add(bludo);
+        bludo4.Description = " очень вкусно";
+        bludo4.Name = "Супь";
+        _context.Bludos.Add(bludo4);
 
         Bludo bludo5 = new Bludo();
-        bludo5.price = 228;
-        bludo5.calories = 228;
-        bludo5.recipe = "два два восемь";
-        bludo5.grams = 228;
+        bludo5.Price = 228;
+        bludo5.Calories = 228;
+        bludo5.Recipe = "два два восемь";
+        bludo5.Grams = 228;
         bludo5.Photo = "два два восемь";
         bludo5.CategoryId = 1;
-        bludo5.description = " очень вкусно";
-        bludo5.name = "Супь";
-        _context.Bludos.Add(bludo);
+        bludo5.Description = " очень вкусно";
+        bludo5.Name = "Супь";
+        _context.Bludos.Add(bludo5);
 
         Bludo bludo6 = new Bludo();
-        bludo6.price = 228;
-        bludo6.calories = 228;
-        bludo6.recipe = "два два восемь";
-        bludo6.grams = 228;
+        bludo6.Price = 228;
+        bludo6.Calories = 228;
+        bludo6.Recipe = "два два восемь";
+        bludo6.Grams = 228;
         bludo6.Photo = "два два восемь";
         bludo6.CategoryId = 1;
-        bludo6.description = " очень вкусно";
-        bludo6.name = "Супь";
-      
+        bludo6.Description = " очень вкусно";
+        bludo6.Name = "Супь";
+        _context.Bludos.Add(bludo6);
+
         Bludo bludo7 = new Bludo();
-        bludo7.price = 228;
-        bludo7.calories = 228;
-        bludo7.recipe = "два два восемь";
-        bludo7.grams = 228;
+        bludo7.Price = 228;
+        bludo7.Calories = 228;
+        bludo7.Recipe = "два два восемь";
+        bludo7.Grams = 228;
         bludo7.Photo = "два два восемь";
         bludo7.CategoryId = 1;
-        bludo7.description = " очень вкусно";
-        bludo7.name = "Супь";
-        _context.Bludos.Add(bludo);
+        bludo7.Description = " очень вкусно";
+        bludo7.Name = "Супь";
+        _context.Bludos.Add(bludo7);
 
         Bludo bludo8 = new Bludo();
-        bludo8.price = 228;
-        bludo8.calories = 228;
-        bludo8.recipe = "два два восемь";
-        bludo8.grams = 228;
+        bludo8.Price = 228;
+        bludo8.Calories = 228;
+        bludo8.Recipe = "два два восемь";
+        bludo8.Grams = 228;
         bludo8.Photo = "два два восемь";
         bludo8.CategoryId = 1;
-        bludo8.description = " очень вкусно";
-        bludo8.name = "Супь";
-        _context.Bludos.Add(bludo);
+        bludo8.Description = " очень вкусно";
+        bludo8.Name = "Супь";
+        _context.Bludos.Add(bludo8);
 
         Bludo bludo9 = new Bludo();
-        bludo9.price = 228;
-        bludo9.calories = 228;
-        bludo9.recipe = "два два восемь";
-        bludo9.grams = 228;
+        bludo9.Price = 228;
+        bludo9.Calories = 228;
+        bludo9.Recipe = "два два восемь";
+        bludo9.Grams = 228;
         bludo9.Photo = "два два восемь";
         bludo9.CategoryId = 1;
-        bludo9.description = " очень вкусно";
-        bludo9.name = "Супь";
-        _context.Bludos.Add(bludo);
+        bludo9.Description = " очень вкусно";
+        bludo9.Name = "Супь";
+        _context.Bludos.Add(bludo9);
 
         Bludo bludo10 = new Bludo();
-        bludo10.price = 228;
-        bludo10.calories = 228;
-        bludo10.recipe = "два два восемь";
-        bludo10.grams = 228;
+        bludo10.Price = 228;
+        bludo10.Calories = 228;
+        bludo10.Recipe = "два два восемь";
+        bludo10.Grams = 228;
         bludo10.Photo = "два два восемь";
         bludo10.CategoryId = 1;
-        bludo10.description = " очень вкусно";
-        bludo10.name = "Супь";
-        _context.Bludos.Add(bludo);
+        bludo10.Description = " очень вкусно";
+        bludo10.Name = "Супь";
+        _context.Bludos.Add(bludo10);
 
       
       
@@ -154,22 +155,22 @@ public class BludosService
     }    
     public void RemoveBludos(int id)
     {
-        Place? place = _context.Places.FirstOrDefault(x => x.Id == id);
-        _context.Places.Remove(place);
+        Bludo? Bludos = _context.Bludos.FirstOrDefault(x => x.Id == id);
+        _context.Bludos.Remove(Bludos);
         _context.SaveChanges();
     }
     public void SetInactive(int id)
     {
-        Place place = _context.Places.FirstOrDefault(x => x.Id == id);
-        place.IsActive = false;
-        _context.Places.Update(place);
+        Bludo Bludos = _context.Bludos.FirstOrDefault(x => x.Id == id);
+        Bludos.IsActive = false;
+        _context.Bludos.Update(Bludos);
         _context.SaveChanges();
     }
     public void SetActive(int id)
     {
-        Place place = _context.Places.FirstOrDefault(x => x.Id == id);
-        place.IsActive = true;
-        _context.Places.Update(place);
+        Bludo Bludos = _context.Bludos.FirstOrDefault(x => x.Id == id);
+        Bludos.IsActive = true;
+        _context.Bludos.Update(Bludos);
         _context.SaveChanges();
     }
     }
